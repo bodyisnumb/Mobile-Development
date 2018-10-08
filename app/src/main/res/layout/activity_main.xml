@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorForBackground">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/text_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/state_focused"
+            android:hint="@string/text_name"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/edt_thief"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <Button
+            android:id="@+id/clearable_button"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:background="@android:drawable/ic_delete"
+            android:textColor="@color/colorSayHelloText"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/say_hello"
+            android:background="@color/colorSayHelloButton"
+            android:textColor="@color/colorSayHelloText"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:textSize="12dp"
+            android:layout_below="@+id/text_name"
+            android:layout_marginTop="80dp"
+            android:layout_centerHorizontal="true"
+            android:text="Say Hello!" />
+
+        <TextView
+            android:id="@+id/text_with_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/text_name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/text_name"
+            android:layout_below="@+id/say_hello"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:text=""/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
