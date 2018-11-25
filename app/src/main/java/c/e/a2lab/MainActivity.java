@@ -8,39 +8,39 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    public EditText text_name;
-    TextView text_with_name;
-    Button clearable_button, say_hello;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener
+{
+    public EditText textName;
+    TextView textWithName;
+    Button clearableButton, sayHello;
     public String name;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(Bundle mSavedInstanceState)
+    {
+        super.onCreate(mSavedInstanceState);
         setContentView(R.layout.activity_main);
-        text_name = findViewById(R.id.text_name);
-        text_with_name = findViewById(R.id.text_with_name);
-        clearable_button= findViewById(R.id.clearable_button);
-        say_hello = findViewById(R.id.say_hello);
+        textName = findViewById(R.id.text_name);
+        textWithName = findViewById(R.id.text_with_name);
+        clearableButton = findViewById(R.id.clearable_button);
+        sayHello = findViewById(R.id.say_hello);
 
-        clearable_button.setOnClickListener(this);
-        say_hello.setOnClickListener(this);
+        clearableButton.setOnClickListener(this);
+        sayHello.setOnClickListener(this);
     }
 
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case  R.id.clearable_button:
-                text_name.getText().clear();
+    public void onClick(View v)
+    {
+        switch (v.getId())
+        {
+            case R.id.clearable_button:
+                textName.getText().clear();
                 break;
-            case  R.id.say_hello:
-                text_with_name.setText("Hello, " + text_name.getText().toString());
-                text_name.getText().clear();
+            case R.id.say_hello:
+                textWithName.setText("Hello, " + textName.getText().toString());
+                textName.getText().clear();
         }
-    }
-
-    public EditText getText_name() {
-        return text_name;
     }
 }

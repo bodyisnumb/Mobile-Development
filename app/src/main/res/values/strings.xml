@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">2Lab</string>
-    <string name="text_name">Input your name</string>
+    <string name="appName">2Lab</string>
+    <string name="textName">Input your name</string>
+    <string name="buttonHello">Say Hello! </string>
 </resources>
