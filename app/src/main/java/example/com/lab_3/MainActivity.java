@@ -16,14 +16,16 @@ import java.util.regex.Pattern;
 
 
 public class MainActivity extends AppCompatActivity {
+    public static final String USERS_INFO_VALUE = "usersInfo";
+    public static final String USER_KEY_VALUE = "key";
+
     private static final String ERROR_INPUT_VALIDATION = "Please correctly fill out the field";
     private static final String ERROR_CAPITAL_LETTER_VALIDATION = "First letter must be capital";
     private static final String ERROR_EMAIL_VALIDATION = "Please enter a valid email";
     private static final String ERROR_PHONE_VALIDATION = "Please enter a valid phone";
     private static final String ERROR_WEAK_PASSWORD_VALIDATION = "Password too weak";
     private static final String ERROR_MATCH_PASSWORD_VALIDATION = "Password doesn't match";
-    public static final String USERS_INFO_VALUE = "usersInfo";
-    public static final String USER_KEY_VALUE = "key";
+
 
     private static final Pattern NAME_PATTERN = Pattern.compile("[A-Z][a-z]+");
     private static final Pattern PASSWORD_PATTERN =

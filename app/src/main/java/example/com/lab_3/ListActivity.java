@@ -16,7 +16,7 @@ import java.util.Set;
 
 public class ListActivity extends MainActivity {
 
-    ListView list;
+  private ListView list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +38,9 @@ public class ListActivity extends MainActivity {
             String fullName, surname = "", name = "", phone = "";
             for (int j = 0; j < userInfo.size(); j++) {
                 String information = userInfo.get(j);
-                if (information.contains("surname: ")) {
+                if (information.contains("surname: ") & information.contains("name: ")) {
                     surname = information.split("surname: ")[1];
-                } else if (information.contains("name: ")) {
                     name = information.split("name: ")[1];
-                } else {
                     phone = information.split("phone: ")[1];
                 }
             }
