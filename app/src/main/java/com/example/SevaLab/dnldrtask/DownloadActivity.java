@@ -1,0 +1,28 @@
+package com.example.SevaLab.dnldrtask;
+
+import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+
+import com.example.SevaLab.R;
+
+public class DownloadActivity extends AppCompatActivity {
+
+    private DownloadPresenter downloadPresenter;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_download);
+        //retrieve the reference to the fragment
+        DownloadFragment downloadFragment = (DownloadFragment)getSupportFragmentManager().findFragmentById(R.id.contentFrame);
+        if(downloadFragment == null){
+            downloadFragment = DownloadFragment.newInstance();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.add(R.id.contentFrame, downloadFragment);
+            transaction.commit();
+        }
+        //crate a presenter
+        downloadPresenter = new DownloadPresenter(downloadFragment); //pass the view reference to the presenter
+        downloadFragment.setPresenter(downloadPresenter); //pass the presenter reference to the view
+    }
+}
