@@ -45,7 +45,7 @@ deploy:
 
 before_script:
   # Prepare pre-accepted licenses to not be promted at installation
-  - echo yes | sdkmanager "build-tools;27.0.3"
+  - echo yes | sdkmanager "build-tools;25.3.3"
   - chmod +x gradlew
 
 script:
