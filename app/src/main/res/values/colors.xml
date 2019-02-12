@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#69f0ae</color>
+
+
+  <color name="white">#ffffff</color>
+  <color name="light_grey">#fff0f0f0</color>
+  <color name="background">#FFF5F5F5</color>
+
+    <!-- 87% -->
+    <!-- 54% -->
+  <color name="text_tertiary_dark">#61000000</color> <!-- 38% -->
+  <color name="text_primary_light">#ffffffff</color>
+
+    <!-- 70% -->
+    <!-- 30% -->
+
+    <color name="secondary_text">#727272</color>
 </resources>
